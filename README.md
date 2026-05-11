@@ -2,6 +2,8 @@
 
 A multi-agent research assistant built with the OpenAI Agents SDK, Olostep, and Reflex.
 
+![Web app Multi-Agent Research Assistant](research/image_2.png)
+
 Enter a research question and a team of AI agents collaborates to produce a polished, source-backed Markdown research report. The original notebook is included, and the same logic is also available as a Reflex web app.
 
 ## Flow
@@ -35,7 +37,7 @@ Manager agent
     +----------> Markdown research report + sources
 ```
 
-![image.png](image.png)
+![Trace Multi-Agent Research Assistant](research/image_1.png)
 
 ## Agents
 
@@ -87,12 +89,4 @@ The app files live in `app/`:
 - **Download report** — Export the full Markdown report with one click.
 - **Recent results** — The source research agent is aware of the current date and prioritizes up-to-date sources.
 
-## Run the notebook
 
-Open and run:
-
-```text
-multi_agent_research_assistant_openai_agents_olostep.ipynb
-```
-
-Set `RUN_LIVE_EXAMPLE=true` to run the live example. The notebook prints an OpenAI trace URL for inspecting the agent workflow.

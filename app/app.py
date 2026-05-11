@@ -360,22 +360,22 @@ def index() -> rx.Component:
             ),
             rx.hstack(
                 rx.button(
-                    "AI agent trends?",
-                    on_click=State.set_query("AI agent trends?"),
+                    "Is remote work dying in 2026?",
+                    on_click=State.set_query("Is remote work dying in 2026?"),
                     variant="soft",
                     color_scheme="gray",
                     border_radius="999px",
                 ),
                 rx.button(
-                    "OpenAI model updates?",
-                    on_click=State.set_query("OpenAI model updates?"),
+                    "What's behind the global coffee shortage?",
+                    on_click=State.set_query("What's behind the global coffee shortage?"),
                     variant="soft",
                     color_scheme="gray",
                     border_radius="999px",
                 ),
                 rx.button(
-                    "Best research tools?",
-                    on_click=State.set_query("Best research tools?"),
+                    "Are electric cars actually cheaper to own?",
+                    on_click=State.set_query("Are electric cars actually cheaper to own?"),
                     variant="soft",
                     color_scheme="gray",
                     border_radius="999px",
