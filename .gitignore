@@ -1,3 +1,14 @@
+# Reflex generated files
+.web/
+.states/
+assets/external/
+frontend.zip
+backend.zip
+reflex.out.log
+reflex.err.log
+.playwright-cli/
+*.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

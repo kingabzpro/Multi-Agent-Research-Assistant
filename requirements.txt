@@ -1,0 +1,6 @@
+openai-agents>=0.17.1
+olostep>=1.1.0
+python-dotenv>=1.2.2
+pydantic>=2.13.4
+reflex>=0.9.2
+markdown>=3.10.2
