@@ -82,6 +82,10 @@ class State(rx.State):
             self.step_started_at = now
             self.logs.append(f"{elapsed:.1f}s  {message}")
 
+    def handle_key_down(self, key: str):
+        if key == "Enter":
+            return State.run_report
+
     @rx.event(background=True)
     async def run_report(self):
         task = asyncio.current_task()
@@ -276,6 +280,7 @@ def index() -> rx.Component:
                 rx.input(
                     value=State.query,
                     on_change=State.set_query,
+                    on_key_down=State.handle_key_down,
                     placeholder="Ask anything",
                     height="2.8rem",
                     width="100%",
