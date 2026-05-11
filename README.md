@@ -2,11 +2,7 @@
 
 A multi-agent research assistant built with the OpenAI Agents SDK, Olostep, and Reflex.
 
-
-
-https://github.com/user-attachments/assets/0e16a3ca-1934-431a-8713-84899e6717e6
-
-
+https://github.com/user-attachments/assets/9aee7d1e-7d3d-4c11-b286-a6b11fef2d8d
 
 Enter a research question and a team of AI agents collaborates to produce a polished, source-backed Markdown research report. The original notebook is included, and the same logic is also available as a Reflex web app.
 
