@@ -1,0 +1,15 @@
+.git
+.env
+.states
+.web
+__pycache__
+*.py[cod]
+*.log
+.venv
+venv
+env
+.mypy_cache
+.pytest_cache
+.ruff_cache
+.DS_Store
+research/*.ipynb_checkpoints

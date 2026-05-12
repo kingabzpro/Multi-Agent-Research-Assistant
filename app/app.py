@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import asyncio
+import re
 import time
 
 import markdown
+from markdown.extensions import Extension
+from markdown.treeprocessors import Treeprocessor
 import reflex as rx
 
 from .research_assistant import environment_status, run_research_assistant
@@ -13,16 +16,36 @@ PAGE_BG = "linear-gradient(135deg, #fbfdff 0%, #fffdf7 48%, #f8fff9 100%)"
 PAGE_PADDING = {"initial": "1rem", "sm": "1.25rem", "lg": "2rem"}
 PANEL_PADDING = {"initial": "1rem", "sm": "1.25rem"}
 _RUNNING_TASKS: dict[str, asyncio.Task] = {}
+_REFERENCE_RETURN_MARKERS = re.compile(r"(?:\s*(?:↩️|↩|🔙|↪️|↪)){1,}")
 
 
 def _plain_markdown(value) -> str:
     if isinstance(value, str):
-        return value
+        return _clean_markdown(value)
     if isinstance(value, dict):
         nested = value.get("markdown_report")
-        return nested if isinstance(nested, str) else str(nested or value)
+        text = nested if isinstance(nested, str) else str(nested or value)
+        return _clean_markdown(text)
     nested = getattr(value, "markdown_report", None)
-    return nested if isinstance(nested, str) else str(value)
+    text = nested if isinstance(nested, str) else str(value)
+    return _clean_markdown(text)
+
+
+def _clean_markdown(value: str) -> str:
+    return _REFERENCE_RETURN_MARKERS.sub("", value)
+
+
+class NewTabLinksTreeprocessor(Treeprocessor):
+    def run(self, root):
+        for element in root.iter("a"):
+            element.set("target", "_blank")
+            element.set("rel", "noopener noreferrer")
+        return root
+
+
+class NewTabLinksExtension(Extension):
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(NewTabLinksTreeprocessor(md), "new_tab_links", 15)
 
 
 class State(rx.State):
@@ -114,7 +137,7 @@ class State(rx.State):
                 self.report_markdown = _plain_markdown(report.markdown_report)
                 self.report_html = markdown.markdown(
                     self.report_markdown,
-                    extensions=["extra", "sane_lists", "tables"],
+                    extensions=["extra", "sane_lists", "tables", NewTabLinksExtension()],
                     output_format="html5",
                 )
                 self.trace_url = trace_url

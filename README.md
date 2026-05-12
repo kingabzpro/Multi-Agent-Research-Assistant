@@ -1,10 +1,24 @@
+---
+title: Multi-Agent Research Assistant
+emoji: 🌍
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: true
+license: apache-2.0
+thumbnail: >-
+  https://cdn-uploads.huggingface.co/production/uploads/603945d6db430f160dced222/_vUmbjxaAA8DYH5iNL0QZ.png
+short_description: Manager → Answer API → Judge → Search/Scrape → Analyst.
+---
+
 # Multi-Agent Research Assistant
 
 A multi-agent research assistant built with the OpenAI Agents SDK, Olostep, and Reflex.
 
 https://github.com/user-attachments/assets/9aee7d1e-7d3d-4c11-b286-a6b11fef2d8d
 
-Enter a research question and a team of AI agents collaborates to produce a polished, source-backed Markdown research report. The original notebook is included, and the same logic is also available as a Reflex web app.
+Enter a research question and the manager agent coordinates judges, retrieval tools, and an analyst agent to produce a polished, source-backed Markdown research report. The original notebook is included, and the same logic is also available as a Reflex web app.
 
 ## Flow
 
@@ -19,22 +33,34 @@ Manager agent
     |        v
     |    Judge agent
     |        |
-    |        +--> Good enough --> Analyst agent --> Markdown report
+    |        +--> Good enough
+    |        |        |
+    |        |        v
+    |        |   Analyst agent --> Markdown report + sources
     |        |
     |        +--> Needs more evidence
     |                 |
     |                 v
-    |          Source research agent
-    |                 |
-    |                 +--> Search with Scrape
-    |                 +--> Targeted Search
-    |                 +--> Scrape selected URLs
+    |          Search with Scrape
     |                 |
     |                 v
-    |          Analyst agent
+    |          Judge agent
     |                 |
-    |                 v
-    +----------> Markdown research report + sources
+    |                 +--> Good enough --> Analyst agent --> Markdown report + sources
+    |                 |
+    |                 +--> Still weak
+    |                         |
+    |                         v
+    |                  Multiple targeted searches
+    |                         |
+    |                         v
+    |                  Pick top 3 relevant URLs
+    |                         |
+    |                         v
+    |                  Scrape selected pages
+    |                         |
+    |                         v
+    +----------------> Analyst agent --> Markdown report + sources
 ```
 
 ![Trace Multi-Agent Research Assistant](research/image_1.png)
@@ -43,10 +69,19 @@ Manager agent
 
 | Agent | Role |
 |---|---|
-| **Manager** | Orchestrates the workflow: answer, judge, research if needed, then write. |
-| **Judge** | Evaluates whether the initial answer is good enough or needs deeper research. |
-| **Source Researcher** | Gathers evidence using Olostep search, scrape, and targeted web queries. Prioritizes the most recent sources. |
+| **Manager** | Orchestrates the workflow and directly calls Olostep answer, search, and scrape tools. |
+| **Judge** | Evaluates the simple answer and search-with-scrape evidence before deciding whether to continue. |
 | **Analyst** | Writes the final Markdown research report from the gathered evidence. |
+
+## Retrieval Policy
+
+The manager follows a staged retrieval policy:
+
+1. Call the Olostep Answer API for a simple first answer.
+2. Ask the Judge whether that answer is sufficient (`score >= 0.85`).
+3. If weak, run Olostep Search with Scrape and ask the Judge again using the same `0.85` threshold.
+4. If still weak, run multiple targeted Olostep Search calls, select at least the top 3 relevant URLs, and scrape those pages.
+5. Send all answer, judge, search, and scrape evidence to the Analyst for the final report.
 
 ## Setup
 
@@ -83,10 +118,8 @@ The app files live in `app/`:
 
 ## Features
 
-- **Multi-agent workflow** — Manager, Judge, Source Researcher, and Analyst agents collaborate automatically.
+- **Multi-agent workflow** — Manager, Judge, and Analyst agents collaborate while the manager directly controls Olostep retrieval tools.
 - **Live progress logs** — Watch each agent step in real time.
 - **Styled Markdown report** — Headings, bullets, tables, code blocks, and more render properly in the browser.
 - **Download report** — Export the full Markdown report with one click.
-- **Recent results** — The source research agent is aware of the current date and prioritizes up-to-date sources.
-
-
+- **Deep retrieval path** — If early evidence is weak, the manager runs targeted searches and scrapes at least the top 3 relevant pages.
