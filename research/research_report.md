@@ -1,36 +1,60 @@
-# What’s Going on with OpenAI’s Sora Shutting Down?
-
 ## Executive Summary
 
-OpenAI is discontinuing Sora as a standalone product and is moving users through a formal wind-down process. The company’s Help Center confirms the shutdown and explains what users should expect.[^1] Reporting from BBC, the *Los Angeles Times*, and TechCrunch frames the move as a product-level discontinuation driven by strategic and operational factors, not a random outage.[^2][^3][^4]
+OpenAI’s Sora is **not** being shut down in a single instant. It is being **phased out**. OpenAI’s Help Center says the Sora web and app experiences were discontinued on **April 26, 2026**, while the **Sora API** will be discontinued on **September 24, 2026**. Reporting from [The New York Times](https://www.nytimes.com/2026/03/24/technology/openai-shutting-down-sora.html) and [CNN](https://www.cnn.com/2026/03/24/tech/openai-sora-video-app-shutting-down) says the move affects the consumer app and a broader video-generation/professional service tied to Sora.
 
-## What happened
+## Key Findings
 
-OpenAI confirmed that Sora is being shut down as a consumer product.[^1] In other words, this is a real discontinuation, not just a temporary service interruption.
+- OpenAI describes the change as a **discontinuation in phases**, not an immediate full shutdown.
+- The **Sora web and app experiences** were discontinued on **April 26, 2026**.
+- The **Sora API** remains available until **September 24, 2026**.
+- The **consumer app/web experience** is the first major product being ended.
+- Reporting indicates the wind-down also reaches a **professional video-generation service** tied to Sora.
+- OpenAI’s stated rationale includes a shift toward **world-simulation research and robotics** and the **high compute costs** of operating the service.
+- OpenAI is reportedly exploring **export/preservation** options for user content as part of the transition.
+
+## What’s Actually Happening
+
+Sora is OpenAI’s video-generation product ecosystem, spanning consumer-facing web/app experiences and an API used for programmatic access. The current situation is best understood as a **managed product retirement**, not a service outage. That distinction matters: an outage is accidental and temporary, while a discontinuation is planned and time-bound.
+
+The wind-down appears to be part of a broader strategic reallocation. The *New York Times* says the shutdown affects both the consumer app and a professional internet service tied to Sora, and connects the move to broader changes after the Disney licensing deal. CNN adds that OpenAI is emphasizing world-simulation research and robotics, suggesting Sora’s current product form is being deprioritized in favor of other priorities.
+
+## What Is Being Shut Down
+
+OpenAI is ending multiple parts of the Sora product stack:
+
+1. **Sora web and app experiences** — discontinued first, on April 26, 2026.
+2. **Sora API** — remains available temporarily and is scheduled to end on September 24, 2026.
+3. **Related consumer/professional video-generation service** — reported by the *New York Times* and CNN as part of the broader wind-down.
+
+## Why It Is Happening
+
+The evidence points to two overlapping drivers:
+
+- **Strategic reprioritization**: OpenAI is shifting attention toward **world-simulation research and robotics**, according to CNN.
+- **Operational economics**: CNN reports the service carried **high compute costs**, forcing trade-offs in how OpenAI allocates resources.
+
+The *New York Times* adds that the move follows broader strategic changes after the **Disney licensing deal**, suggesting Sora’s role may have changed as OpenAI’s product and partnership strategy evolved.
 
 ## Timeline
 
-- OpenAI published its official discontinuation notice.[^1]
-- News outlets then reported on the shutdown and its context.[^2][^3][^4]
-- Users are being given a managed transition rather than an abrupt cutoff.[^1]
+| Component | Status | Date | Notes |
+|---|---:|---:|---|
+| Sora web/app experience | Discontinued | April 26, 2026 | Main consumer-facing product ended first |
+| Sora API | Scheduled discontinuation | September 24, 2026 | Programmatic access remains available until later cutoff |
+| Related professional video service | Wound down | Reported in March 2026 coverage | Described in news reporting as tied to Sora |
 
-## Why it’s shutting down
+## What This Means for Users
 
-The clearest official explanation is that OpenAI is refocusing on other priorities.[^2] Independent reporting adds that Sora likely faced business and operational pressures: it is expensive to run, difficult to scale, and part of a broader product strategy shift.[^4]
+For users, the key takeaway is that Sora’s shutdown is **not a sudden outage** and not a single simultaneous removal of every access path. Instead, OpenAI is phasing out the consumer experience first and the API later, which gives users more time to adapt.
 
-The *Los Angeles Times* also reported that the expected Disney-related business angle did not materialize as hoped, which weakened one possible foundation for the product.[^3]
+For the broader market, the move signals that even prominent AI media products can be constrained by **compute economics** and shifting research priorities. It also suggests OpenAI is choosing to concentrate resources on longer-horizon capabilities—especially world simulation and robotics—rather than continue supporting the current Sora product structure indefinitely.
 
-## What users should expect
+## Bottom Line
 
-OpenAI’s notice indicates users should prepare for changing access and possible export or account-handling steps during the wind-down.[^1] The practical takeaway: if you have content in Sora, act before the discontinuation completes.
+Sora is being **deliberately discontinued in stages**, not experiencing a technical failure. The consumer web/app product ended first, the API is next, and the rationale appears to be a mix of strategic refocus and the high cost of running the service.
 
-## Bottom line
+## Sources
 
-Sora is being shut down as an active OpenAI product, and the move appears to be a deliberate business/strategy decision rather than a technical emergency.[^1][^2][^3][^4]
-
-## Citations
-
-[^1]: OpenAI Help Center, “What to know about the Sora discontinuation” — https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation
-[^2]: BBC News, “OpenAI to shut down Sora” — https://www.bbc.com/news/articles/c3w3e467ewqo
-[^3]: Los Angeles Times, “OpenAI will shut down Sora: why, what to know” — https://www.latimes.com/entertainment-arts/business/story/2026-03-24/openai-will-shut-down-sora-why-what-to-know
-[^4]: TechCrunch, “Why OpenAI really shut down Sora” — https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/
+- [OpenAI Help Center: What to know about the Sora discontinuation](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation)
+- [The New York Times: OpenAI Shutting Down Sora](https://www.nytimes.com/2026/03/24/technology/openai-shutting-down-sora.html)
+- [CNN: OpenAI Sora video app shutting down](https://www.cnn.com/2026/03/24/tech/openai-sora-video-app-shutting-down)
