@@ -1,24 +1,10 @@
----
-title: Multi-Agent Research Assistant
-emoji: 🌍
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 7860
-pinned: true
-license: apache-2.0
-thumbnail: >-
-  https://cdn-uploads.huggingface.co/production/uploads/603945d6db430f160dced222/_vUmbjxaAA8DYH5iNL0QZ.png
-short_description: Manager → Answer API → Judge → Search/Scrape → Analyst.
----
-
 # Multi-Agent Research Assistant
 
 A multi-agent research assistant built with the OpenAI Agents SDK, Olostep, and Reflex.
 
 https://github.com/user-attachments/assets/9aee7d1e-7d3d-4c11-b286-a6b11fef2d8d
 
-Enter a research question and the manager agent coordinates judges, retrieval tools, and an analyst agent to produce a polished, source-backed Markdown research report. The original notebook is included, and the same logic is also available as a Reflex web app.
+Enter a research question and the manager agent coordinates judges, retrieval tools, and an analyst agent to produce a polished, source-backed Markdown research report. The Reflex app renders the report in the browser and exports a formatted PDF.
 
 ## Flow
 
@@ -111,15 +97,22 @@ Then open the local URL printed by Reflex, usually:
 http://localhost:3000
 ```
 
+## App Structure
+
 The app files live in `app/`:
 
-- `app/app.py` — Reflex UI with styled Markdown report rendering and download.
-- `app/research_assistant.py` — OpenAI Agents SDK multi-agent workflow with Olostep tools.
+| File | Purpose |
+|---|---|
+| `app/app.py` | Reflex UI components and page registration only. |
+| `app/state.py` | Reflex state, event handlers, progress logging, stop/reset behavior, and downloads. |
+| `app/research_assistant.py` | OpenAI Agents SDK workflow with Manager, Judge, Analyst, and Olostep tools. |
+| `app/report_formatting.py` | Markdown cleanup, browser HTML rendering, link behavior, and report CSS. |
+| `app/pdf_export.py` | ReportLab-based PDF generation with headings, bullets, links, and Markdown table support. |
 
 ## Features
 
-- **Multi-agent workflow** — Manager, Judge, and Analyst agents collaborate while the manager directly controls Olostep retrieval tools.
-- **Live progress logs** — Watch each agent step in real time.
-- **Styled Markdown report** — Headings, bullets, tables, code blocks, and more render properly in the browser.
-- **Download report** — Export the full Markdown report with one click.
-- **Deep retrieval path** — If early evidence is weak, the manager runs targeted searches and scrapes at least the top 3 relevant pages.
+- **Multi-agent workflow**: Manager, Judge, and Analyst agents collaborate while the manager directly controls Olostep retrieval tools.
+- **Live progress logs**: Watch each agent step in real time.
+- **Styled Markdown report**: Headings, bullets, tables, code blocks, and more render properly in the browser.
+- **Download report**: Export the full report as a formatted PDF using ReportLab.
+- **Deep retrieval path**: If early evidence is weak, the manager runs targeted searches and scrapes at least the top 3 relevant pages.

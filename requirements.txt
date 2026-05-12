@@ -4,3 +4,4 @@ python-dotenv>=1.2.2
 pydantic>=2.13.4
 reflex>=0.9.2
 markdown>=3.10.2
+reportlab>=4.0.4

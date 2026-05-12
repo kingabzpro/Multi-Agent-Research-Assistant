@@ -128,10 +128,6 @@ def compact_json(data: Any, max_chars: int = 8000) -> str:
     return text[:max_chars] + "\n... [truncated]"
 
 
-def current_date_context() -> str:
-    return datetime.now().strftime("%B %d, %Y")
-
-
 def current_year_context() -> str:
     return str(datetime.now().year)
 
@@ -341,10 +337,12 @@ manager_agent = Agent(
     name="Manager research agent",
     model=MODEL,
     instructions=(
-        f"Current date: {current_date_context()}\n"
-        f"Current year: {current_year_context()}\n\n"
         "You are the orchestrator for a multi-agent research assistant. You must manage the workflow, "
-        "not answer from your own memory. Follow this policy exactly:\n"
+        "not answer from your own memory. For current, recent, latest, ongoing, or time-sensitive "
+        "topics, if the user query does not mention a year, add the current year "
+        f"({current_year_context()}) to the answer_query, search_with_scrape, and search_web query text "
+        "so the tools look for recent results. If the user already mentions a year, preserve that year. "
+        "Do not treat older sources as sufficient when newer coverage is needed. Follow this policy exactly:\n"
         "1. Always call answer_query first to get a simple initial answer for the user's question.\n"
         "2. Immediately call judge_answer_quality on the original question plus the answer_query result. "
         "If the judge returns is_good_enough=true and score >= 0.85, stop researching and call "
@@ -388,15 +386,7 @@ async def run_research_assistant(
 
     try:
         await emit_progress("Starting manager research agent.")
-        current_date = current_date_context()
-        current_year = current_year_context()
         prompt = f"""
-Current date:
-{current_date}
-
-Current year:
-{current_year}
-
 Research question:
 {query}
 
