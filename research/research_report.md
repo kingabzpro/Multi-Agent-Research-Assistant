@@ -1,65 +1,77 @@
-## Executive Summary
+# Executive Summary
 
-OpenAI is shutting down Sora, but not all at once. The company has officially discontinued the Sora web/app experience as of April 26, 2026, and says the Sora API will be discontinued on September 24, 2026. Users have a limited export window, after which OpenAI says data will be permanently deleted.
+OpenAI is not “shutting down Sora” in the sense of abandoning the project entirely, but it is discontinuing the consumer-facing Sora web and app experiences and retiring the Sora API on a later date. OpenAI’s Help Center says the Sora web and app were discontinued on April 26, 2026, and the API will be discontinued on September 24, 2026, with users urged to export content before deletion follows later. [OpenAI Help Center](https://help.openai.com/)
 
-The core fact is confirmed by OpenAI’s Help Center. Some broader explanations circulating online—especially about cost, profitability, or adoption—are not established by the evidence provided here. NBC News additionally reports that a Disney-related deal tied to OpenAI will be dissolved, but that reporting does not by itself explain the shutdown in full.
+The shift appears to reflect a strategic reprioritization: reporting from Reuters and BBC says OpenAI is focusing more on core models, coding tools, enterprise customers, robotics, and broader platform ambitions. Reuters also reports the move startled Disney and that the previously reported $1 billion Disney partnership never closed and no money changed hands. [Reuters](https://www.reuters.com/) [BBC](https://www.bbc.com/news)
 
-## Key Findings
+# Key Findings
 
-- OpenAI has officially confirmed that Sora is being discontinued.
-- The consumer web/app shut down on April 26, 2026.
-- The Sora API remains available until September 24, 2026.
-- OpenAI provides a data export path during the sunset period and says user data will be deleted after the export window.
-- NBC News reports a Disney-related deal will be dissolved, but the evidence does not confirm that as the sole or official reason.
-- Unsupported claims about compute costs or profitability should be treated as unverified.
+- **Consumer Sora is gone:** OpenAI ended the Sora web and app experiences on April 26, 2026. [OpenAI Help Center](https://help.openai.com/)
+- **The API stays up briefly longer:** OpenAI says Sora API access ends on September 24, 2026. [OpenAI Help Center](https://help.openai.com/)
+- **The main reason is strategic refocusing:** Reporting says OpenAI is shifting attention toward coding, enterprise usage, AGI-related work, robotics, and a broader “super-app” direction. [Reuters](https://www.reuters.com/) [BBC](https://www.bbc.com/news)
+- **Commercial performance and safety concerns mattered:** BBC reporting cites weak monetization, plus concerns about misinformation and copyright infringement. [BBC](https://www.bbc.com/news)
+- **The Disney story is real, but incomplete in many headlines:** Reuters says the reported $1 billion Disney deal did not close and no money changed hands, though Disney had explored licensing use of its IP. [Reuters](https://www.reuters.com/)
 
-## Context
+# Context
 
-Sora is OpenAI’s video-generation product. In this case, the question is not whether rumors are circulating, but whether the shutdown is actually happening. Based on the official Help Center notice, it is.
+Sora was OpenAI’s generative video product, aimed at creating short video content from prompts. Its shutdown has been widely framed as a surprise because it followed heavy outside attention and high-profile industry interest. But the practical change is narrower than “OpenAI killed Sora entirely”: the consumer product is discontinued now, while the API has a later retirement date. [OpenAI Help Center](https://help.openai.com/)
 
-The shutdown appears to be phased rather than immediate:
+The timing matters. OpenAI is asking users to save their material now, because the company says content will later be deleted after the service wind-down. That makes this a managed product retirement rather than an abrupt outage. [OpenAI Help Center](https://help.openai.com/)
 
-- **April 26, 2026:** Sora web/app experiences discontinued.
-- **September 24, 2026:** Sora API discontinued.
+# Evidence Review
 
-OpenAI also directs users to an export process at its sunset page and says data will be deleted after the export period ends. That indicates the company is handling this as a formal product retirement rather than a temporary outage.
+**Primary source:** OpenAI’s Help Center provides the clearest confirmation of status and dates. It explicitly states the Sora web and app are discontinued and gives the API retirement date. This is the strongest evidence for what actually happened operationally. [OpenAI Help Center](https://help.openai.com/)
 
-## Evidence Review
+**Reuters:** Reuters reports that OpenAI dropped Sora, that the decision surprised Disney, and that the earlier reported $1 billion deal did not close. Reuters also places the move inside a broader strategic shift toward coding tools, corporate customers, AGI, robotics, and a larger platform strategy. [Reuters](https://www.reuters.com/)
 
-### Official confirmation
-OpenAI’s Help Center states: “What to know about the Sora discontinuation,” confirming both the shutdown and the timeline for the web/app and API. It also provides instructions for exporting data and notes eventual deletion after the export window. [OpenAI Help Center](https://help.openai.com/)
+**BBC:** BBC reporting reinforces the strategic story and adds commercial and policy context, including low reported in-app revenue, plus misinformation and copyright concerns. It also notes the consumer app and web platform were closed. [BBC](https://www.bbc.com/news)
 
-### Reporting on related business consequences
-NBC News reports that OpenAI is shutting down its Sora video-creation app and that a Disney deal with OpenAI will be dissolved. That supports the existence of broader business changes around Sora, but the report in the evidence set does not provide an official OpenAI rationale. [NBC News](https://www.nbcnews.com/)
+**Other major outlets:** Coverage from CNN, CNBC, the New York Times, and the Los Angeles Times broadly aligns with the same framing: Sora was pulled from consumer use, while OpenAI appears to be reallocating attention toward higher-priority products and infrastructure. [CNN](https://www.cnn.com/) [CNBC](https://www.cnbc.com/) [New York Times](https://www.nytimes.com/) [Los Angeles Times](https://www.latimes.com/)
 
-### Unsupported explanations
-The initial answer claimed reasons such as massive compute costs, weak profitability, low adoption, and a collapsed Disney partnership. In the evidence provided, only the Disney-related reporting appears; the rest are not backed by the official source and should not be presented as confirmed facts.
+# Detailed Analysis
 
-## Detailed Analysis
+## What happened
 
-The best-supported reading is straightforward: OpenAI is winding down Sora in an orderly, staged retirement. The web/app shutdown first affects end users directly, while the API remains available for a longer transition period. That pattern usually suggests planned deprecation, not an abrupt technical failure.
+OpenAI has discontinued the consumer Sora experience and set a later end date for the API. In practical terms, users can no longer rely on Sora as an active consumer app/web product, and developers have a defined sunset window before the API is retired. [OpenAI Help Center](https://help.openai.com/)
 
-A compact view:
+## Why OpenAI says it did this
 
-| Topic | Confirmed by evidence | Status |
-|---|---:|---|
-| Sora web/app discontinuation | Yes | Confirmed |
-| Sora API discontinuation date | Yes | Confirmed |
-| Export window and deletion policy | Yes | Confirmed |
-| Official business rationale | No | Not confirmed in evidence |
-| Disney-related deal dissolution | Reported by NBC | Reported, not official in evidence |
+The reporting points to a combination of business and strategy factors:
 
-The most important distinction is between **confirmed product status** and **reported explanation**. The first is clear: Sora is being shut down on a defined schedule. The second is murkier: the evidence set does not include a direct OpenAI explanation for why, so any narrative about economics, demand, or partnership fallout remains incomplete.
+- **Resource allocation:** OpenAI is concentrating on products and markets that better align with its near-term priorities.
+- **Strategic focus:** Reuters says the company is emphasizing coding tools, corporate customers, AGI work, robotics, and a broader platform vision. [Reuters](https://www.reuters.com/)
+- **Monetization:** BBC reports Sora’s in-app revenue was comparatively weak relative to ChatGPT, suggesting limited commercial traction. [BBC](https://www.bbc.com/news)
+- **Safety and rights issues:** BBC also cites concerns about misinformation and copyright infringement, which are especially sensitive for generative video. [BBC](https://www.bbc.com/news)
 
-## Implications
+## The Disney context
 
-For users, the immediate implication is that Sora access is ending and any needed exports should be completed within the stated sunset period. For observers, the more important takeaway is that shutdown rumors are accurate only insofar as they reflect the official discontinuation notice; broader causal claims need stronger sourcing.
+The Disney angle is less about a signed, paid partnership and more about a deal that reportedly never closed. Reuters says OpenAI’s move “startled Disney,” but also that the reported $1 billion transaction did not finalize and no money changed hands. That distinction is important: Disney may have been involved in licensing discussions, but the deal was not a completed commercial commitment. [Reuters](https://www.reuters.com/)
 
-## Source Notes
+## Compact comparison
 
-The strongest source here is OpenAI’s own Help Center notice, which directly establishes the shutdown and timeline. NBC News is useful for confirming that the shutdown has broader business implications, but it is secondary reporting and does not substitute for an official rationale from OpenAI. Claims beyond those sources should be treated cautiously.
+| Topic | Consumer Sora | Sora API |
+|---|---:|---:|
+| Status | Discontinued | Scheduled for retirement |
+| OpenAI date | April 26, 2026 | September 24, 2026 |
+| User impact | Consumer access ended | Developer access ends later |
+| Source | OpenAI Help Center | OpenAI Help Center |
 
-## References
+# Implications
 
-- OpenAI Help Center: https://help.openai.com/
-- NBC News: https://www.nbcnews.com/
+For users, the immediate implication is simple: Sora is no longer available as a consumer web/app product, and any content stored there should be exported promptly. For developers, the API sunset means any integrations need to be considered against the September retirement date. [OpenAI Help Center](https://help.openai.com/)
+
+More broadly, the move suggests OpenAI is being selective about where it deploys compute, product attention, and brand risk. The decision also highlights a recurring issue in generative media: even technically impressive tools can face pressure from cost, monetization, copyright, and trust/safety concerns. [Reuters](https://www.reuters.com/) [BBC](https://www.bbc.com/news)
+
+# Source Notes
+
+The clearest status information comes from OpenAI itself, which is the authoritative source for product availability and retirement dates. Reuters provides the strongest high-level reporting on the strategic and Disney-related context. BBC adds useful detail on monetization and policy concerns. The other major outlets are consistent with the same general picture, though the Reuters and OpenAI sources are the most central here. [OpenAI Help Center](https://help.openai.com/) [Reuters](https://www.reuters.com/) [BBC](https://www.bbc.com/news)
+
+# References
+
+- OpenAI Help Center — https://help.openai.com/
+- Reuters — https://www.reuters.com/
+- BBC News — https://www.bbc.com/news
+- CNN — https://www.cnn.com/
+- CNBC — https://www.cnbc.com/
+- The New York Times — https://www.nytimes.com/
+- Los Angeles Times — https://www.latimes.com/
